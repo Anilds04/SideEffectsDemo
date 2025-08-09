@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
             SideEffectDemoTheme {
 
                 SideEffectDemoTheme {
-                    ListComposable()
+                    LaunchedEffectExample()
 
                 }
             }

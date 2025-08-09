@@ -8,7 +8,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 
 
-var counter = 1
+private var counter = 1
 
 /* Here HasSideEffect can call multiple times and counter will be incremented
  * many times and it is out of scope if some other composable consuming counter
