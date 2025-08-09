@@ -1,5 +1,6 @@
 package com.example.sideeffectdemo
 
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -31,12 +32,18 @@ fun RememberCoroutineScopeExample() {
     Column {
         Text(text = text)
         Button(onClick = {
-            scope.launch {
-                for (i in 0 until 10) {
-                    counter.value++
-                    delay(1000)
+
+                scope.launch {
+                    try {
+                        for (i in 0 until 10) {
+                            counter.value++
+                            delay(1000)
+                        }
+                    }
+                    catch (e : Exception){
+                        Log.d("TAG", "RememberCoroutineScopeExample: Exception stop")
+                    }
                 }
-            }
         }
         ) {
 
