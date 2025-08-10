@@ -23,8 +23,7 @@ class MainActivity : ComponentActivity() {
             SideEffectDemoTheme {
 
                 SideEffectDemoTheme {
-                    keyBoard()
-
+                DerivedStateExample()
                 }
             }
         }
