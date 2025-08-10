@@ -63,7 +63,6 @@ fun b(){
 fun App(){
     val value = remember { mutableStateOf(::a) }
 
-  //  val scope = rememberCoroutineScope()
     Button(onClick = {value.value = ::b}) {
         Text("Update my value")
     }
